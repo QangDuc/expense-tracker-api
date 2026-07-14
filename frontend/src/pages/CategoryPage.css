@@ -1,0 +1,63 @@
+.category-page {
+  max-width: 900px;
+}
+
+.category-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+}
+
+.category-name {
+  font-weight: var(--weight-medium);
+}
+
+.category-icon-cell {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+/* Color input */
+.color-input {
+  height: 44px !important;
+  padding: 4px !important;
+  cursor: pointer;
+}
+
+/* Table action buttons */
+.table-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  color: var(--text-muted);
+}
+
+.table-action-btn:hover {
+  background: var(--border-light);
+  color: var(--text);
+}
+
+.table-action-btn--danger:hover {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+/* Modal footer actions */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}

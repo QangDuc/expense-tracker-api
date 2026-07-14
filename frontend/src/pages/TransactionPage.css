@@ -1,0 +1,116 @@
+.transaction-page {
+  max-width: 1100px;
+}
+
+/* Filters */
+.transaction-page__filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.transaction-page__filter-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.transaction-page__filter-select .filter-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.transaction-page__filter-select select {
+  padding-left: 36px;
+  min-width: 140px;
+  height: 40px;
+  font-size: var(--font-sm);
+}
+
+/* Cell styles */
+.tx-cell-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tx-cell-name {
+  font-weight: var(--weight-medium);
+  color: var(--text);
+}
+
+.tx-cell-note {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.tx-cell-cat {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.tx-cell-amount {
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-sm);
+  white-space: nowrap;
+}
+
+.tx-cell-amount.income { color: var(--success); }
+.tx-cell-amount.expense { color: var(--danger); }
+
+.tx-cell-date {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Reuse action btn styles from CategoryPage */
+.table-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  color: var(--text-muted);
+}
+
+.table-action-btn:hover {
+  background: var(--border-light);
+  color: var(--text);
+}
+
+.table-action-btn--danger:hover {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 640px) {
+  .transaction-page__filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .transaction-page__filter-select select {
+    width: 100%;
+  }
+}

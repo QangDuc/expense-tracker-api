@@ -1,0 +1,90 @@
+.budget-page {
+  max-width: 1100px;
+}
+
+.budget-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-5);
+}
+
+/* Budget card */
+.budget-card .budget-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.budget-card__cat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.budget-card__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.budget-card__cat-name {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+}
+
+.budget-card__amount {
+  font-size: var(--font-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text);
+  margin-bottom: var(--space-1);
+}
+
+.budget-card__period {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* Reuse action buttons */
+.table-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  color: var(--text-muted);
+}
+
+.table-action-btn:hover {
+  background: var(--border-light);
+  color: var(--text);
+}
+
+.table-action-btn--danger:hover {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 640px) {
+  .budget-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

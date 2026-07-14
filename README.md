@@ -288,7 +288,8 @@ docker compose up --build
 | SQL Server | `1433` | Cơ sở dữ liệu |
 
 ---
+👨‍💻 Author
+Nguyễn Quang Đức
 
-## 📄 Giấy phép
+GitHub: https://github.com/QangDuc
 
-Dự án được phân phối dưới giấy phép được ghi trong file [LICENSE](LICENSE).
